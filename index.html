@@ -2,50 +2,59 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <title>Document</title>
-    <div class="weather-app">
-    <div class="header">
-<Form class="search-form" id="search-form">
-        <input type="search" placeholder="Enter a city..." required id="search-form-input"/>
-        <input type="submit" value="Search" class="search-form-button"/>
-</Form>
-    </div>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Weather App</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 </head>
-<main>
-<div class="weather-app-data">
-<div>
-    <h1 class="weather-app-city" id="city">
-        Paris
-    </h1>
-    <p class="weather-app-details">
-    Sunday 21:38, broken clouds
-    </br>
-    Humidity: <strong>86%</strong>, Wind: <strong>4.63km/h</strong>
-    </p>
-</div>
-<div class="weather-app-container">
-    <div class="weather-icon">☁️</div>
-    <div class="temperature">12</div>
-    <div class="weather-unit">°C</div>
-</div>
-</div>
-</main>
 
-<footer>
-    This project was coded by Emily Gallaher at
-    <a href="https://github.com/wubbie88/week-7" target="_blank"> GetHub</a>
-    hosted by <a href="https://app.netlify.com/sites/unrivaled-faloodeh-b31094/deploys/668065fcc2f9740008b17205"
-        target="_blank">
-        netlify
-    </a>
-</footer>
-</div>
-<script src="script.js"></script>
+<body>
+    <div class="weather-app">
+        <header>
+            <form class="search-form" id="search-form">
+                <input type="search" placeholder="Enter a city.." required id="search-form-input"
+                    class="search-form-input" />
+                <input type="submit" value="Search" class="search-form-button" />
+            </form>
+        </header>
+        <main>
+            <div class="weather-app-data">
+                <div>
+                    <h1 class="weather-app-city" id="city"></h1>
+                    <p class="weather-app-details">
+                        <span id="time"></span>
+                        <span id="description"></span>
+                        <br />
+                        Humidity: <strong id="humidity"></strong>, 
+                        Wind: 
+                        <strong id="wind-speed"></strong>
+                    </p>
+                </div>
+                <div class="weather-app-temperature-container">
+                    <div id="icon">
+                    </div>
+                    <div class="weather-app-temperature" id="temperature"></div>
+                    <div class="weather-app-unit">°F</div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            This project was coded by Emily Gallaher at
+            <a href="https://github.com/wubbie88/week-7" target="_blank"> GetHub</a>
+            hosted by <a href="https://app.netlify.com/sites/unrivaled-faloodeh-b31094/deploys/668065fcc2f9740008b17205"
+                target="_blank">
+                netlify
+            </a>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
 
 </html>
